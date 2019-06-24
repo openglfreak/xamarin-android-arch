@@ -113,8 +113,7 @@ source=('git+https://github.com/xamarin/xamarin-android.git'
         'https://dist.nuget.org/win-x86-commandline/v5.1.0/nuget.exe'
         Configuration.Override.props
         xaprepare-arch.patch
-        api-xml-adjuster-fix.patch
-        FixDebuggingTasks.cs)
+        api-xml-adjuster-fix.patch)
 noextract=("${_android_source[@]##*/}")
 sha256sums=('SKIP'
             'SKIP'
@@ -190,8 +189,7 @@ sha256sums=('SKIP'
             '0ace4f53493332c9a75291ee96acd76b371b4e687175e4852bf85948176d7152'
             'c633ea19a84a5b638fb60d6421d8c2b10fdd6f1a5b455c4f0fe0fa0b0628878b'
             '809792dbe7384634e82406b724c3f4f452af0c536f75bf115deb93aa682a7142'
-            '2057d5dafe366476075fefb34787b4ce848ccf3b6835321f33ba25d63edefa80'
-            '2b149f4d40f83484874e7c6f7aa79a2783b31f4fcd89278b376a38d20408896e')
+            '2057d5dafe366476075fefb34787b4ce848ccf3b6835321f33ba25d63edefa80')
 
 if [ true = "${_include_proprietary}" ]; then
     source+=('https://download.visualstudio.microsoft.com/download/pr/098c4ebb-3ab8-4c98-9ae1-0623444e1aac/012941fc30eae3df28dbe986a4802f29/xamarin.android.sdk-9.4.0.17.vsix'

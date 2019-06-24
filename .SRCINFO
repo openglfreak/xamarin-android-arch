@@ -138,7 +138,6 @@ pkgbase = xamarin-android-git
 	source = Configuration.Override.props
 	source = xaprepare-arch.patch
 	source = api-xml-adjuster-fix.patch
-	source = FixDebuggingTasks.cs
 	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = SKIP
@@ -214,7 +213,6 @@ pkgbase = xamarin-android-git
 	sha256sums = c633ea19a84a5b638fb60d6421d8c2b10fdd6f1a5b455c4f0fe0fa0b0628878b
 	sha256sums = 809792dbe7384634e82406b724c3f4f452af0c536f75bf115deb93aa682a7142
 	sha256sums = 2057d5dafe366476075fefb34787b4ce848ccf3b6835321f33ba25d63edefa80
-	sha256sums = 2b149f4d40f83484874e7c6f7aa79a2783b31f4fcd89278b376a38d20408896e
 
 pkgname = xamarin-android-git
 
