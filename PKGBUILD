@@ -22,7 +22,8 @@ makedepends=('xmlstarlet'
              'referenceassemblies-pcl'
              'unzip'
              'zip'
-             'p7zip')
+             'p7zip'
+             'lsb-release')
 depends=('msbuild'
          'mono>=3.0.0'
          'glibc>=2.28'

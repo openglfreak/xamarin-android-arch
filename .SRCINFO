@@ -18,6 +18,7 @@ pkgbase = xamarin-android-git
 	makedepends = unzip
 	makedepends = zip
 	makedepends = p7zip
+	makedepends = lsb-release
 	depends = msbuild
 	depends = mono>=3.0.0
 	depends = glibc>=2.28
