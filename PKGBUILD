@@ -328,7 +328,7 @@ prepare() {
 
     _prepare_submodules
 
-    mkdir "${srcdir}/xamarin-android/.nuget"
+    mkdir -p "${srcdir}/xamarin-android/.nuget"
     mv "${srcdir}/nuget.exe" "${srcdir}/xamarin-android/.nuget/NuGet.exe"
     mv "${srcdir}/Configuration.Override.props" "${srcdir}/xamarin-android/"
 
@@ -337,7 +337,7 @@ prepare() {
     # Fix overlooked ProjectReference to a removed project.
     git -C "${srcdir}/xamarin-android" apply "${srcdir}/api-xml-adjuster-fix.patch"
 
-    mkdir "${srcdir}/android-archives"
+    mkdir -p "${srcdir}/android-archives"
     AndroidSourceArchives=("${_android_source[@]##*/}")
     mv "${AndroidSourceArchives[@]/#/${srcdir}/}" "${srcdir}/android-archives/"
 
