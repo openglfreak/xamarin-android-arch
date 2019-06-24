@@ -26,7 +26,7 @@ TERM=dumb mono --debug AndroidSourcesGenerate.exe
 
 Aapt2Version="$(xml sel -N msb='http://schemas.microsoft.com/developer/msbuild/2003' -t -v '/msb:Project/msb:PropertyGroup/msb:Aapt2Version' ./src/aapt2/aapt2.targets 2>/dev/null)"
 for os in osx linux windows; do
-    printf 'https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/%s/aapt2-%s-%s.zip\n' "${Aapt2Version}" "${Aapt2Version}" "${os}"
+    printf 'https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/%s/aapt2-%s-%s.jar\n' "${Aapt2Version}" "${Aapt2Version}" "${os}"
 done
 
 XABundletoolVersion="$(xml sel -N msb='http://schemas.microsoft.com/developer/msbuild/2003' -t -v '/msb:Project/msb:PropertyGroup/msb:XABundleToolVersion' ./Configuration.props 2>/dev/null)"

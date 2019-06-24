@@ -66,9 +66,9 @@ _android_source=('https://dl.google.com/android/repository/android-2.3.3_r02.zip
                  'https://d3pxv6yz143wms.cloudfront.net/8.212.04.2/amazon-corretto-8.212.04.2-linux-x64.tar.gz' # build-tools/xaprepare/xaprepare/ConfigAndData/Configurables.Linux.cs
                  'https://xamjenkinsartifact.azureedge.net/mono-sdks/android-release-Linux-537654c1c79564668e4cab9735be613028328a70.zip' # build-tools/xaprepare/xaprepare/ConfigAndData/Configurables.cs
                  'https://xamjenkinsartifact.azureedge.net/mono-sdks/android-release-Windows-537654c1c79564668e4cab9735be613028328a70.zip'
-                 'https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/3.4.1-5326820/aapt2-3.4.1-5326820-osx.zip' # src/aapt2/aapt2.targets
-                 'https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/3.4.1-5326820/aapt2-3.4.1-5326820-linux.zip'
-                 'https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/3.4.1-5326820/aapt2-3.4.1-5326820-windows.zip'
+                 'https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/3.4.1-5326820/aapt2-3.4.1-5326820-osx.jar' # src/aapt2/aapt2.targets
+                 'https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/3.4.1-5326820/aapt2-3.4.1-5326820-linux.jar'
+                 'https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/3.4.1-5326820/aapt2-3.4.1-5326820-windows.jar'
                  'https://github.com/google/bundletool/releases/download/0.8.0/bundletool-all-0.8.0.jar') # src/bundletool/bundletool.targets
 source=('git+https://github.com/xamarin/xamarin-android.git'
         'git+https://github.com/mono/api-doc-tools.git'
@@ -341,6 +341,11 @@ prepare() {
     mkdir "${srcdir}/android-archives"
     AndroidSourceArchives=("${_android_source[@]##*/}")
     mv "${AndroidSourceArchives[@]/#/${srcdir}/}" "${srcdir}/android-archives/"
+
+    # The aapt2 archives have to be renamed for some reason.
+    for Aapt2Archive in "${srcdir}/android-archives"/aapt2-*.jar; do
+        mv "${Aapt2Archive}" "${Aapt2Archive%.jar}.zip"
+    done
 
     # TODO: download bundle and move it to "${srcdir}/android-archives/"
     # The bundle currently 404's.
