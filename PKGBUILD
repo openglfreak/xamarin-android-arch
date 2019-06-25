@@ -1,4 +1,11 @@
+# Maintainer: Torge Matthies <openglfreak at googlemail dot com>
+# Maintainer: PedroHLC <root@pedrohlc.com>
+
 # This PKGBUILD does not work without internet acces.
+
+# This repository contains just the files needed to build the package.
+# For additional maintainer tools for this package, see:
+# https://github.com/openglfreak/xamarin-android-arch
 
 # Set this to true to include proprietary components.
 # You can also set it as an environment variable.
