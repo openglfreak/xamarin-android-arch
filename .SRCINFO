@@ -1,6 +1,6 @@
 pkgbase = xamarin-android-git
 	pkgdesc = Provides open-source bindings of the Android SDK for use with .NET managed languages (Git version)
-	pkgver = 9.4.99.r2234.g10903598
+	pkgver = 9.4.99.r2233.g53393e13
 	pkgrel = 1
 	url = https://github.com/xamarin/xamarin-android
 	arch = x86_64
@@ -13,7 +13,7 @@ pkgbase = xamarin-android-git
 	makedepends = jdk8-openjdk
 	makedepends = libzip
 	makedepends = ninja
-	makedepends = nuget
+	makedepends = nuget>=3
 	makedepends = referenceassemblies-pcl
 	makedepends = unzip
 	makedepends = zip
@@ -82,7 +82,7 @@ pkgbase = xamarin-android-git
 	source = git+https://github.com/mono/illinker-test-assets.git
 	source = Java.Interop::git+https://github.com/xamarin/java.interop.git
 	source = git+https://github.com/nih-at/libzip.git
-	source = git+https://github.com/grendello/LibZipSharp.git
+	source = git+https://github.com/xamarin/LibZipSharp.git
 	source = git+https://github.com/mono/linker.git
 	source = git+https://github.com/mono/llvm.git
 	source = git+https://github.com/mono/Lucene.Net.Light.git

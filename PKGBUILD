@@ -13,7 +13,7 @@
 
 
 pkgname=xamarin-android-git
-pkgver=9.4.99.r2234.g10903598
+pkgver=9.4.99.r2233.g53393e13
 pkgrel=1
 pkgdesc="Provides open-source bindings of the Android SDK for use with .NET managed languages (Git version)"
 arch=('x86_64')
@@ -25,7 +25,7 @@ makedepends=('xmlstarlet'
              'jdk8-openjdk'
              'libzip'
              'ninja'
-             'nuget' #'nuget>=3'
+             'nuget>=3'
              'referenceassemblies-pcl'
              'unzip'
              'zip'
