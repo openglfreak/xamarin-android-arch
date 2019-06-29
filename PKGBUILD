@@ -200,10 +200,14 @@ sha256sums=('SKIP'
             '2057d5dafe366476075fefb34787b4ce848ccf3b6835321f33ba25d63edefa80')
 
 if [ true = "${_include_proprietary}" ]; then
+    pkgname=xamarin-android-proprietary-git
+    pkgdesc="$pkgdesc (Including proprietary components)"
     source+=('https://download.visualstudio.microsoft.com/download/pr/098c4ebb-3ab8-4c98-9ae1-0623444e1aac/012941fc30eae3df28dbe986a4802f29/xamarin.android.sdk-9.4.0.17.vsix'
              runtime-xml.patch)
     sha256sums+=('e266b202f4263d722545f20212c09fb3211d8f8fbccbbaf0feed6835a7dfc7dc'
                  '48e5378c14adb3316d504df39e23c331fe9ff28ff3d1d9593ff995caa7d8eb69')
+    provides+=('xamarin-android-git')
+    conflicts+=('xamarin-android-git')
 fi
 
 pkgver() {
@@ -330,7 +334,7 @@ _prepare_submodules() {
 }
 
 prepare() {
-    local AndroidSourceArchives ProprietaryExtractPath ProprietaryParams
+    local AndroidSourceArchives ProprietaryParams
     cd "${srcdir}/xamarin-android"
 
     _prepare_submodules
@@ -373,7 +377,7 @@ prepare() {
 }
 
 build() {
-    local ProprietaryExtractPath ProprietaryParams
+    local ProprietaryParams
     cd "${srcdir}/xamarin-android"
 
     if [ true = "${_include_proprietary}" ]; then
