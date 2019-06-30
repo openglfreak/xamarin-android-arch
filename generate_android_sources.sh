@@ -12,7 +12,7 @@ TargetDir="${target:-${TMPDIR}/xamarin-android-checkout}"
 if [ -e "${TargetDir}" ]; then
     echo 'error: target directory exists'
     printf 'target directory: %s\n' "${TargetDir}"
-    return 1
+    exit 1
 fi
 
 git clone "${SrcDir}/xamarin-android" "${TargetDir}" > /dev/null 2>&1

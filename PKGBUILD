@@ -3,7 +3,7 @@
 
 # This PKGBUILD does not work without internet acces.
 
-# This repository contains just the files needed to build the package.
+# The AUR repository contains just the files needed to build this package.
 # For additional maintainer tools for this package, see:
 # https://github.com/openglfreak/xamarin-android-arch
 
@@ -65,7 +65,7 @@ _android_source=('https://dl.google.com/android/repository/android-2.3.3_r02.zip
                  'https://dl.google.com/android/repository/docs-24_r01.zip'
                  'https://dl.google.com/android/repository/android_m2repository_r47.zip'
                  'https://dl.google.com/android/repository/sys-img/android/x86-28_r04.zip'
-                 'https://dl.google.com/android/repository/android-ndk-r19c-linux-x86_64.zip'
+                 'https://dl.google.com/android/repository/android-ndk-r20-linux-x86_64.zip'
                  'https://dl.google.com/android/repository/build-tools_r29-linux.zip'
                  'https://dl.google.com/android/repository/platform-tools_r29.0.1-linux.zip'
                  'https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip'
@@ -181,7 +181,7 @@ sha256sums=('SKIP'
             '68db2690cb92e4ee5373ac9b792642c90717d8f417d83eccea48781171b3182a'
             'a3f91808dce50c1717737de90c18479ed3a78b147e06985247d138e7ab5123d0'
             '7c3615c55b64713fe56842a12fe6827d6792cb27a9f95f9fa3aee1ff1be47f16'
-            '4c62514ec9c2309315fd84da6d52465651cdb68605058f231f1e480fcf2692e1'
+            '57435158f109162f41f2f43d5563d2164e4d5d0364783a9a6fab3ef12cb06ce0'
             '97d25d76d7ef5f545c5f034fd77479b56d2e846c59c03756178db99443741d8f'
             '16d2543ac5fb840e1e7c54735591fd0a9552cef128f3e14a9baffe9560acbc69'
             '92ffee5a1d98d856634e8b71132e8a95d96c83a63fde1099be3d86df3106def9'
@@ -202,9 +202,9 @@ sha256sums=('SKIP'
 if [ true = "${_include_proprietary}" ]; then
     pkgname=xamarin-android-proprietary-git
     pkgdesc="$pkgdesc (Including proprietary components)"
-    source+=('https://download.visualstudio.microsoft.com/download/pr/098c4ebb-3ab8-4c98-9ae1-0623444e1aac/012941fc30eae3df28dbe986a4802f29/xamarin.android.sdk-9.4.0.17.vsix'
+    source+=('https://download.visualstudio.microsoft.com/download/pr/d78329f2-f4e6-440d-97d1-5a1b6b52a4ee/9595a9df7a9ceebe52c761cf18e68440/xamarin.android.sdk-9.4.0.34.vsix'
              runtime-xml.patch)
-    sha256sums+=('e266b202f4263d722545f20212c09fb3211d8f8fbccbbaf0feed6835a7dfc7dc'
+    sha256sums+=('15a42e686b6491b4aaf2bfa7656bf3297908573968fb910095e52eeb7c9aaeb0'
                  '48e5378c14adb3316d504df39e23c331fe9ff28ff3d1d9593ff995caa7d8eb69')
     provides+=('xamarin-android-git')
     conflicts+=('xamarin-android-git')
