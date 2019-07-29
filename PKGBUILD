@@ -202,9 +202,9 @@ sha256sums=('SKIP'
 if [ true = "${_include_proprietary}" ]; then
     pkgname=xamarin-android-proprietary-git
     pkgdesc="$pkgdesc (Including proprietary components)"
-    source+=('https://download.visualstudio.microsoft.com/download/pr/d78329f2-f4e6-440d-97d1-5a1b6b52a4ee/9595a9df7a9ceebe52c761cf18e68440/xamarin.android.sdk-9.4.0.34.vsix'
+    source+=('https://download.visualstudio.microsoft.com/download/pr/402a338a-8d27-4e64-b9c1-0d93e01e3183/3fe416138114726f3cdd74b85c8123dc/xamarin.android.sdk-9.5.0.27.vsix'
              runtime-xml.patch)
-    sha256sums+=('15a42e686b6491b4aaf2bfa7656bf3297908573968fb910095e52eeb7c9aaeb0'
+    sha256sums+=('70de08a0afb7febe45f6147acf12d13aa7aa66ec14d93ddfb88d757e4a97316d'
                  '48e5378c14adb3316d504df39e23c331fe9ff28ff3d1d9593ff995caa7d8eb69')
     provides+=('xamarin-android-git')
     conflicts+=('xamarin-android-git')
