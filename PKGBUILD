@@ -205,7 +205,7 @@ if [ true = "${_include_proprietary}" ]; then
     source+=('https://download.visualstudio.microsoft.com/download/pr/402a338a-8d27-4e64-b9c1-0d93e01e3183/3fe416138114726f3cdd74b85c8123dc/xamarin.android.sdk-9.5.0.27.vsix'
              runtime-xml.patch)
     sha256sums+=('70de08a0afb7febe45f6147acf12d13aa7aa66ec14d93ddfb88d757e4a97316d'
-                 '48e5378c14adb3316d504df39e23c331fe9ff28ff3d1d9593ff995caa7d8eb69')
+                 '353d503f404294812040cbaf9c2183f25e62fd56f06cc205ae25eee5f3ae0887')
     provides+=('xamarin-android-git')
     conflicts+=('xamarin-android-git')
 fi
