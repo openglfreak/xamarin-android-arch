@@ -248,7 +248,6 @@ _prepare_Java_Interop() {
 
 _prepare_mono() {
     local Submodules
-    cd external/mono
 
     Submodules=(Newtonsoft.Json
                 api-doc-tools
@@ -301,8 +300,6 @@ _prepare_mono() {
     git submodule update "external/cecil"
 
     cd ../..
-
-    cd ../..
 }
 
 _prepare_submodules() {
@@ -313,7 +310,6 @@ _prepare_submodules() {
                 dlfcn-win32
                 libzip
                 mman-win32
-                mono
                 mxe
                 nrefactory
                 opentk
@@ -331,6 +327,16 @@ _prepare_submodules() {
             "_prepare_${Submodule//[^0-9A-Za-z_]/_}"
         fi
     done
+
+    if [ -e mono ]; then
+        cd mono
+        git fetch --all
+    else
+        git clone "${srcdir}/mono" mono
+        cd mono
+    fi
+    _prepare_mono
+    cd ..
 }
 
 prepare() {
