@@ -1,0 +1,12 @@
+diff --git a/build-tools/xaprepare/xaprepare/OperatingSystems/Linux.cs b/build-tools/xaprepare/xaprepare/OperatingSystems/Linux.cs
+index 1a2c7c07..41548ba0 100644
+--- a/build-tools/xaprepare/xaprepare/OperatingSystems/Linux.cs
++++ b/build-tools/xaprepare/xaprepare/OperatingSystems/Linux.cs
+@@ -33,6 +33,7 @@ and re-enable it after building with the following command:
+ 			{"Ubuntu",    (ctx) => new LinuxUbuntu (ctx)},
+ 			{"LinuxMint", (ctx) => new LinuxMint   (ctx)},
+ 			{"Arch",      (ctx) => new LinuxArch   (ctx)},
++			{"ManjaroLinux", (ctx) => new LinuxArch (ctx)},
+ 		};
+ 
+ 		bool warnBinFmt;
