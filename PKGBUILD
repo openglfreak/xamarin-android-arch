@@ -313,6 +313,10 @@ _prepare_submodules() {
                 xamarin-android-api-compatibility
                 xamarin-android-tools)
 
+    # For some reason these are not automatically added to external
+    git submodule add https://github.com/nih-at/libzip.git external/libzip
+    git submodule add https://github.com/xamarin/LibZipSharp.git external/LibZipSharp
+
     for Submodule in "${Submodules[@]}"; do
         git submodule init "external/${Submodule}"
         git config "submodule.external/${Submodule}.url" "${srcdir}/${Submodule}"
