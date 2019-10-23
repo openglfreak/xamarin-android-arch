@@ -119,7 +119,8 @@ source=('git+https://github.com/xamarin/xamarin-android.git'
         "${_android_source[@]}"
         'https://dist.nuget.org/win-x86-commandline/v5.1.0/nuget.exe'
         Configuration.Override.props
-        xaprepare-arch.patch)
+        xaprepare-arch.patch
+        xaprepare-manjaro.patch)
 noextract=("${_android_source[@]##*/}")
 sha256sums=('SKIP'
             'SKIP'
@@ -193,7 +194,8 @@ sha256sums=('SKIP'
             '4070cbd35c7c8f868864f9d85cab19f8feb4f3982d846c509b9e210a6ec23457'
             '0ace4f53493332c9a75291ee96acd76b371b4e687175e4852bf85948176d7152'
             'c633ea19a84a5b638fb60d6421d8c2b10fdd6f1a5b455c4f0fe0fa0b0628878b'
-            '809792dbe7384634e82406b724c3f4f452af0c536f75bf115deb93aa682a7142')
+            '809792dbe7384634e82406b724c3f4f452af0c536f75bf115deb93aa682a7142'
+            '6a18361790a34a3992d881237d6a363e403b98811e7aeae0f9639bb8ec4626f3')
 
 if [ true = "${_include_proprietary}" ]; then
     pkgname=xamarin-android-proprietary-git
@@ -344,8 +346,9 @@ prepare() {
     mv "${srcdir}/nuget.exe" "${srcdir}/xamarin-android/.nuget/NuGet.exe"
     mv "${srcdir}/Configuration.Override.props" "${srcdir}/xamarin-android/"
 
-    # Add Arch Linux support to xaprepare.
+    # Add Arch Linux and Manjaro Linux support to xaprepare.
     git -C "${srcdir}/xamarin-android" apply "${srcdir}/xaprepare-arch.patch"
+    git -C "${srcdir}/xamarin-android" apply "${srcdir}/xaprepare-manjaro.patch"
 
     mkdir -p "${srcdir}/android-archives"
     AndroidSourceArchives=("${_android_source[@]##*/}")
